@@ -8,6 +8,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #777;
@@ -53,6 +56,46 @@ section {
 
 .section-title p {
   margin-bottom: 0;
+}
+.navbar ul li{
+  padding: 10px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#fff;
+  font-family: sans-serif;
+}
+.navbar ul li::after{
+  content:'';
+  height: 3px;
+  width: 0%;
+  background: #009688;
+  position: absolute;
+  left:15px;
+  bottom: -2px;
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+  overflow-x: hidden;
+}
+.dropdown ul li::after{
+  content:'';
+  height: 3px;
+  width: 0%;
+  background: #009688;
+  position: absolute;
+  left:0px;
+  bottom: -2px;
+  transition: 0.5s;
+   
+}
+.dropdown ul li:hover::after{
+  width: 100%;
+   
 }
 
 /*--------------------------------------------------------------
@@ -164,6 +207,7 @@ section {
   position: relative;
   left: -250px;
 } */
+
 
 #header .logo h1 {
   /* height: 100px; */
@@ -484,6 +528,7 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+ 
 .about h3 {
   font-weight: 400;
   font-size: 26px;
